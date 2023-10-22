@@ -32,18 +32,47 @@ const aboutData = [
       {
         title: 'Web Development',
         icons: [
-          <FaHtml5 />,
-          <FaCss3 />,
-          <FaJs />,
-          <FaReact />,
-          <SiNextdotjs />,
-          <SiFramer />,
-          <FaWordpress />,
+          {
+            id: 1,
+            icon: <FaHtml5 />
+          },
+          {
+            id: 2,
+            icon: <FaCss3 />,
+          }, {
+            id: 3,
+            icon: <FaJs />,
+          }, {
+            id: 4,
+            icon: <FaReact />,
+          }, {
+            id: 5,
+            icon: <SiNextdotjs />,
+          }, {
+            id: 6,
+            icon: <SiFramer />,
+          }, {
+            id: 7,
+            icon: <FaWordpress />,
+          },
         ],
       },
       {
         title: 'UI/UX Design',
-        icons: [<FaFigma />, <SiAdobexd />, <SiAdobephotoshop />],
+        icons: [
+          {
+            id: 1,
+            icon: <FaFigma />,
+          },
+          {
+            id: 2,
+            icon: <SiAdobexd />,
+          }, {
+            id: 3,
+            icon: <SiAdobephotoshop />,
+          },
+
+        ],
       },
     ],
   },
@@ -130,10 +159,13 @@ const About = () => {
             initial='hidden'
             animate='show'
             exit='hidden'
-            className='max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0 direc di '>
-            הכל התחיל שסיימתי לימודים של אנדסאי ונכנסתי למקום תכנולוגי בשירותי בצה"ל הכרתי שם אנשים מקצועים בכל התחומים שצריך כדי להקים חברה מצליחה ומשגשגת.
+            
+            className='max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0 direc di  '
+            >
+            {/* הכל התחיל שסיימתי לימודים של אנדסאי ונכנסתי למקום תכנולוגי בשירותי בצה"ל הכרתי שם אנשים מקצועים בכל התחומים שצריך כדי להקים חברה מצליחה ומשגשגת.
             התחלנו בפרוייקטים קטנים ומהר מאוד אנשים הגיעו מפה לאוזן,
             והחברה הגיע למה שהיא היום כל העובדים נותנים את כל הידע הרחב שלהם והאהבה שלהם לתחום ולכן <span className='text-accent text-[20px]  '>שאיפה </span> הוא השם שמתווה את כולם
+        */}
           </motion.p>
           {/* counters */}
           <motion.div
@@ -169,11 +201,11 @@ const About = () => {
         </div>
         {/* info */}
         <motion.div
-        variants={fadeIn("left", 0.4)}
-        initial='hidden'
-        animate='show'
-        exit='hidden'
-        className='flex flex-col w-full xl:max-w-[48%] h-[480px]  '>
+          variants={fadeIn("left", 0.4)}
+          initial='hidden'
+          animate='show'
+          exit='hidden'
+          className='flex flex-col w-full xl:max-w-[48%] h-[480px]  '>
           <div className='flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4'>
             {aboutData.map((item, itemIndex) => {
               return (
@@ -201,7 +233,7 @@ const About = () => {
                   <div>{item.stage}</div>
                   <div className='flex gap-x-4'>
                     {item.icons?.map((icon, itemIndex) => {
-                      return <div className='text-2xl text-white' >{icon}</div>
+                      return <div key={itemIndex} className='text-2xl text-white' >{icon.icon}</div>
                     })}
                   </div>
                 </div>)
