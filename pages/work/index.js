@@ -22,14 +22,14 @@ const Work = () => {
                 animate='show'
                 exit='hidden'
                 className='h2 xl:mt-12'>
-                <span className='text-accent' > .</span>ההעבודות שלנו
+                עבודות שלנו <span className='text-accent ' >.</span>
               </motion.h2>
               <motion.p
                 variants={fadeIn('up', 0.4)}
                 initial='hidden'
                 animate='show'
                 exit='hidden'
-                className='mb-4 max-w-[400px] mx-auto lg:mx-0 ' >
+                className='mb-4 max-w-[400px] mx-auto lg:mx-0 text-right ' >
                 אם הלקוח חכם מאוד , הוא יוכל להגיע לתוצאה הרצויה תעשה הבחנה בזמן השירות הנל
               </motion.p>
 

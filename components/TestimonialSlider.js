@@ -1,25 +1,32 @@
 // testimonial data
 const testimonialData = [
   {
-    image: '/t-avt-1.png',
-    name: 'Anne Smith',
-    position: 'Customer',
+    image: '/mancal2.png',
+    name: 'נריה מלחי',
+    position: 'מנכ"ל החברה',
     message:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum expedita odit beatae, cupiditate saepe quam officia aut placeat quas neque!',
+      'כמנכ"ל חברת מפתחים בהייטק, מטרתנו היא יצירת פתרונות טכנולוגיים מתקדמים ויעילים. בעזרת צוות מוכשר וידע מעמיק, אנו מספקים ללקוחותינו יתרונות מובהקים בעולם הטכנולוגיה. אמינות ואתיקה הן ערכים מרכזיים שמכירים ופועלים בפתיחות ובשקיפות.',
   },
   {
-    image: '/t-avt-2.png',
-    name: 'Jane Doe',
-    position: 'Customer',
+    image: '/nikita-devops.png',
+    name: ' ניקיטה אושקלוב ',
+    position: 'ראש צוות Devops ',
     message:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum expedita odit beatae, cupiditate saepe quam officia aut placeat quas neque!',
+      'בתפקידי כראש פיתוח DevOps בחברת הייטק, מנהיג את הצוות להטמעת תהליכי CI/CD מתקדמים. אני מקדם אוטומציה, תשתית כקוד ושימוש יעיל בעננים. בכנות ואדיבות, אני פועל כדי לשפר את זרימות העבודה ולמקסם את הפרודוקטיביות, מספק שירות טכני מהיר ויציב לצוותי הפיתוח.',
   },
   {
-    image: '/t-avt-3.png',
-    name: 'Jhon Doe',
-    position: 'Customer',
+    image: '/shoam-frontend.png',
+    name: 'שוהם מלאכאס',
+    position: 'ראש צוות Frontend',
     message:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum expedita odit beatae, cupiditate saepe quam officia aut placeat quas neque!',
+      'כראש פיתוח Frontend בעולם ההייטק, מטרתי היא ליצור חוויות משתמש מדהימות ומשפרות עבור הלקוחות. בעזרת צוות מוכשר וידע עמוק בטכנולוגיות הצד הקדמי, אנו מפתחים ממשקים שפשוטים לשימוש, אך מתקדמים מבחינה טכנולוגית. אני מאמין בעבודה צמודה לצוותי פיתוח ולקוחות כדי להבין את הצרכים ולספק פתרונות מותאמים אישית שמספקים ערך מוסף אמיתי.',
+  },
+  {
+    image: '/gal-backend.png',
+    name: 'גל כהן',
+    position: 'ראש צוות Backround',
+    message:
+      'כראש פיתוח backend בחברת הייטק, אני מוקדש ליצירת מערכות טכנולוגיות מתקדמות. בהתבסס על ידע עמוק וניסיון רב, אני מוביל צוות של מתכנתים ליצירת פתרונות מתוחזקים ואמינים. אני מאמין בפיתוח פתרונות שמספקים ערך מוסף אמיתי ללקוחות ומסייעים לארגונים לצמוח ולהצליח.',
   },
 ];
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -44,17 +51,18 @@ const TestimonialSlider = () => {
       {testimonialData.map((person, index) => {
         return (
           <SwiperSlide key={index} >
-            <div className='flex flex-col items-center md:flex-row gap-x-8 h-full px-16' >
+            <div className='flex flex-col items-center md:flex-row gap-x-8 h-full px-16 overflow-x-auto' >
 
               {/* avatar, name, position */}
               <div className='w-full max-w-[300px] flex flex-col xl:justify-center
               items-center relative mx-auto xl:mx-0 ' >
                 <div className='flex flex-col justify-center text-center' >
-                  <div className='mb-2 max-auto ' >
+                  <div className='mb-2 max-auto  rounded-full   bg-white/10    ' >
                     <Image
                       src={person.image}
-                      width={100}
+                      width={150}
                       height={100}
+                      className='rounded-full aspect-square '
                       alt='AVATAR IMAGE'
                     />
                   </div>
@@ -71,7 +79,7 @@ const TestimonialSlider = () => {
                   <FaQuoteLeft className='text-4xl xl:text-6xl text-white/20 mx-auto md:mx-0' />
                 </div>
                 {/* message */}
-                <div className='xl:text-lg text-center md:text-left'
+                <div className='xl:text-lg text-center md:text-right'
                 >{person.message}</div>
 
               </div>

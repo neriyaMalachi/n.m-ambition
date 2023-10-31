@@ -5,7 +5,6 @@ import {
   FaCss3,
   FaJs,
   FaReact,
-  FaWordpress,
   FaFigma,
 } from "react-icons/fa";
 
@@ -14,6 +13,7 @@ import {
   SiFramer,
   SiAdobexd,
   SiAdobephotoshop,
+  SiTailwindcss,
 } from "react-icons/si";
 
 import Avatar from '../../components/Avatar'
@@ -27,10 +27,10 @@ import CountUp from 'react-countup';
 //  data
 const aboutData = [
   {
-    title: 'skills',
+    title: 'כישורים',
     info: [
       {
-        title: 'Web Development',
+        title: 'מפתחים בשפות שונות -',
         icons: [
           {
             id: 1,
@@ -50,76 +50,56 @@ const aboutData = [
             icon: <SiNextdotjs />,
           }, {
             id: 6,
-            icon: <SiFramer />,
-          }, {
-            id: 7,
-            icon: <FaWordpress />,
+            icon: <SiTailwindcss />,
           },
+
+
         ],
       },
       {
-        title: 'UI/UX Design',
+        title: 'מעצבי UI/UX -',
         icons: [
           {
             id: 1,
             icon: <FaFigma />,
           },
-          {
-            id: 2,
-            icon: <SiAdobexd />,
-          }, {
-            id: 3,
-            icon: <SiAdobephotoshop />,
-          },
+
 
         ],
       },
     ],
-  },
-  {
-    title: 'awards',
+  }, {
+    title: 'ניסיון',
     info: [
       {
-        title: 'Webby Awards - Honoree',
-        stage: '2011 - 2012',
+        title: ' עבודה עם מערכות מורכבות במקומות בטחוניות -',
+        stage: '2019 - 2023',
       },
       {
-        title: 'Adobe Design Achievement Awards - Finalist',
-        stage: '2009 - 2010',
+        title: 'התחלת עבודה עם בעלי עסקים ומפתחים מבחוץ -',
+        stage: '2020 - 2023',
+      },
+      {
+        title: 'תמיכת לקוחות תכנית -',
+        stage: '2020 - 2023',
+
+      },
+      {
+        title: 'תפקידי ניהול פרויקטים -',
+        stage: '2020 - 2023',
+
       },
     ],
   },
   {
-    title: 'experience',
+    title: 'תמיכה ושירותים ',
     info: [
       {
-        title: 'UX/UI Designer - XYZ Company',
-        stage: '2012 - 2023',
+        title: `החברה נותנת תמיכה ושרותים של העלאת הפרוייקט גם אחרי סיום העבודה בדיקות התוכנה אחריות על deploy תקין ועבודה טובה ומהירה של התוכנה זמינה לפניות של הלקוחות בכל שעות היום .`,
+
       },
       {
-        title: 'Web Developer - ABC Agency',
-        stage: '2010 - 2012',
-      },
-      {
-        title: 'Intern - DEF Corporation',
-        stage: '2008 - 2010',
-      },
-    ],
-  },
-  {
-    title: 'credentials',
-    info: [
-      {
-        title: 'Web Development - ABC University, LA, CA',
-        stage: '2011',
-      },
-      {
-        title: 'Computer Science Diploma - AV Technical Institute',
-        stage: '2009',
-      },
-      {
-        title: 'Certified Graphic Designer - ABC Institute, Los Angeles, CA',
-        stage: '2006',
+        title: " השירות נעשה עם עובדים בעלת  סבלנות רבה ואפשריות להנגיש ללקוחות שלא מבינים בכלל בתוכנה את העבודה ועל מה הם משלמים ולחוות את הבניה איתנו יחד ולתת את הדגשים שהלקוח יותר חשוב לו."
       },
     ],
   },
@@ -129,28 +109,18 @@ const About = () => {
   const [index, setIndex] = useState(0)
   console.log(index);
   return (
-    <div className='h-full bg-primary/30 py-32 text-center xl:text-left ' >
+    <div className='overflow-x-auto flex h-full bg-primary/30 py-32 text-center xl:text-left ' >
       <Circles />
-      <motion.div
-        variants={fadeIn("right", 0.2)}
-        initial='hidden'
-        animate='show'
-        exit='hidden'
-        className=' hidden xl:flex absolute bottom-0 -left-[180px] '
 
-      >
-
-        <Avatar />
-      </motion.div>
-      <div className='container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6  '>
+      <div className='container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6 overflow-x-auto '>
         {/* text */}
-        <div className='flex-1 flex flex-col justify-center '>
+        <div className='flex-1 flex flex-col text-center'>
           <motion.h2
             variants={fadeIn("right", 0.2)}
             initial='hidden'
             animate='show'
             exit='hidden'
-            className='h2'
+            className='h2  xl:text-right text-center'
           >
             המקום שבו<span className='text-accent'> רעיונות</span> נפגשים עם מעשה
           </motion.h2>
@@ -159,13 +129,13 @@ const About = () => {
             initial='hidden'
             animate='show'
             exit='hidden'
-            
-            className='max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0 direc di  '
-            >
-            {/* הכל התחיל שסיימתי לימודים של אנדסאי ונכנסתי למקום תכנולוגי בשירותי בצה"ל הכרתי שם אנשים מקצועים בכל התחומים שצריך כדי להקים חברה מצליחה ומשגשגת.
+
+            className='max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0   '
+          >
+            הכל התחיל שסיימתי לימודים של אנדסאי ונכנסתי למקום טכנולוגי בשירותי בצה"ל הכרתי שם אנשים מקצועים בכל התחומים  בכדי להקים חברה מצליחה ומשגשגת.
             התחלנו בפרוייקטים קטנים ומהר מאוד אנשים הגיעו מפה לאוזן,
-            והחברה הגיע למה שהיא היום כל העובדים נותנים את כל הידע הרחב שלהם והאהבה שלהם לתחום ולכן <span className='text-accent text-[20px]  '>שאיפה </span> הוא השם שמתווה את כולם
-        */}
+            והחברה הגיע למה שהיא היום. כל העובדים נותנים את כל הידע הרחב שלהם והאהבה שלהם לתחום ולכן <span className='text-accent text-[20px] m-1  '>AMBITION </span>   הוא השם שמתווה את כלל העובדים ותמיד מזכיר לכולם להמשיך לתת את הכל.
+
           </motion.p>
           {/* counters */}
           <motion.div
@@ -176,25 +146,25 @@ const About = () => {
             className='hidden md:flex md:max-w-xl xl:max-w-none mx-auto xl:mx-0 mb-8 ' >
             <div className='flex flex-1 xl:gap-x-6' >
               {/* experience */}
-              <div className='relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0 ' >
-                <div className=' text-2xl xl:text-4xl font-extrabold text-accent mb-2 '>
-                  <CountUp start={0} end={5} duration={10} /> +
-                </div>
+              <div className='relative flex-1  after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0 ' >
                 <div className=' text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px] ' >שנים של ניסיון</div>
+                <div className=' text-2xl xl:text-4xl font-extrabold text-accent mb-2 '>
+                  <CountUp start={0} end={4} duration={10} /> +
+                </div>
               </div>
               {/* clients */}
               <div className='relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0 ' >
-                <div className=' text-2xl xl:text-4xl font-extrabold text-accent mb-2 '>
-                  <CountUp start={0} end={46} duration={5} /> +
-                </div>
                 <div className=' text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px] ' >לקוחות מרוצים</div>
+                <div className=' text-2xl xl:text-4xl font-extrabold text-accent mb-2 '>
+                  <CountUp start={0} end={13} duration={5} /> +
+                </div>
               </div>
               {/* projects */}
               <div className='relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0 ' >
-                <div className=' text-2xl xl:text-4xl font-extrabold text-accent mb-2 '>
-                  <CountUp start={0} end={53} duration={5} /> +
-                </div>
                 <div className=' text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px] ' >סיום פרויקטים</div>
+                <div className=' text-2xl xl:text-4xl font-extrabold text-accent mb-2 '>
+                  <CountUp start={0} end={15} duration={5} /> +
+                </div>
               </div>
             </div>
           </motion.div>
@@ -221,15 +191,14 @@ const About = () => {
               )
             })}
           </div>
-          <div className='py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start '>
+          <div className='  py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start '>
             {aboutData[index].info.map((item, itemIndex) => {
               return (
                 <div
                   key={itemIndex}
-                  className='flex-1 flex flex-col md:flex-row max-w-max gap-x2 items-center text-white/60 '
+                  className='flex-1 flex flex-col md:flex-row max-w-max gap-x2 text-right items-center text-white/60 '
                 >
                   <div className='font-light mb-2 md:mb-0 '> {item.title}</div>
-                  <div className=' hidden md:flex ' >- </div>
                   <div>{item.stage}</div>
                   <div className='flex gap-x-4'>
                     {item.icons?.map((icon, itemIndex) => {

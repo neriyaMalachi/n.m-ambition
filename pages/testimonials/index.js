@@ -13,7 +13,7 @@ const Testimonials = () => {
         animate='show'
         exit='hidden'
         className="h2 mb-8 xl:mb-0" >
-          מה הלקוחות <span className="text-accent"> אומרים</span>
+           ראשי <span className="text-accent"> הצוותים</span> שלנו 
         </motion.h2>
         {/* slider */}
         <motion.div
