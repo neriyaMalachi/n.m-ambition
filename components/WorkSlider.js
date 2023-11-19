@@ -58,7 +58,6 @@ const workSlides = {
         },
         {
           title: 'N.M AMBITION',
-
           path: '/logo.png',
         },
 
@@ -93,14 +92,15 @@ const WorkSlider = () => {
               clickable: true,
             }}
             modules={[Pagination]}
+            
           >
-            {workSlides.slides.map((slide, index) => {
+            {workSlides.slides.map((slide, unique) => {
               return (
-                <SwiperSlide key={index} >
+                <SwiperSlide key={unique.toString()} >
                   <div className=' grid grid-cols-2 grid-rows-2  cursor-pointer '>
-                    {slide.images.map((image, index) => {
+                    {slide.images.map((image, i) => {
                       return (
-                        <div key={index} className='   relative rounded-lg overflow-hidden flex items-start justify-center group  '>
+                        <div key={i.toString()} className='   relative rounded-lg overflow-hidden flex items-start justify-center group  '>
                           <div className='flex items-center  justify-center relative  group' >
                             <Image
                               src={image.path}
@@ -134,6 +134,9 @@ const WorkSlider = () => {
                 </SwiperSlide>
               )
             })}
+
+
+
           </Swiper>
         )
       })}

@@ -23,7 +23,7 @@ export const navData = [
     icon: <IoBriefcase />,
   },
   {
-    name: 'התחברות',
+    name: 'אימייל',
     path: '/contact',
     icon: <HiEnvelope />,
   },
