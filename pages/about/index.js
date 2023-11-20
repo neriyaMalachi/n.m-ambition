@@ -107,7 +107,6 @@ const aboutData = [
 
 const About = () => {
   const [index, setIndex] = useState(0)
-  console.log(index);
   return (
     <div className='overflow-x-auto flex h-full bg-primary/30 py-32 text-center xl:text-left ' >
       <Circles />

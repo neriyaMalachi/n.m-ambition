@@ -83,17 +83,7 @@ const WorkSlider = () => {
       modules={[Pagination]}
       className="  h-[280px] sm:h-[480px]  "
     >
-      {workSlides.slides.map((slide, index) => {
-        return (
-          <Swiper
-            key={index}
-            spaceBetween={10}
-            pagination={{
-              clickable: true,
-            }}
-            modules={[Pagination]}
-            
-          >
+     
             {workSlides.slides.map((slide, unique) => {
               return (
                 <SwiperSlide key={unique.toString()} >
@@ -104,8 +94,8 @@ const WorkSlider = () => {
                           <div className='flex items-center  justify-center relative  group' >
                             <Image
                               src={image.path}
-                              width={300}
-                              height={200}
+                              width={'300'}
+                              height={'200'}
                               alt={'IMAGE'}
                               className=' m-1 rounded-lg  '
                             />
@@ -131,15 +121,13 @@ const WorkSlider = () => {
                       )
                     })}
                   </div>
-                </SwiperSlide>
+                 </SwiperSlide>
               )
             })}
 
 
 
-          </Swiper>
-        )
-      })}
+         
     </Swiper>
   );
 };
