@@ -2,7 +2,7 @@ import Circles from '/components/Circles'
 import { BsArrowRight } from 'react-icons/bs'
 import { motion } from 'framer-motion'
 import { fadeIn } from '../../variants'
-import { sendContactForm } from '../lib/api'
+import { sendContactForm } from '../../lib/api'
 import { data } from 'autoprefixer'
 
 const Contact = () => {
