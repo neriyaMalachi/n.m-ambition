@@ -87,27 +87,26 @@ const WorkSlider = () => {
             {workSlides.slides.map((slide, unique) => {
               return (
                 <SwiperSlide key={unique.toString()} >
-                  <div className=' grid grid-cols-2 grid-rows-2  cursor-pointer '>
+                  <div className=' grid grid-cols-2 grid-rows-2 cursor-pointer '>
                     {slide.images.map((image, i) => {
                       return (
-                        <div key={i.toString()} className='   relative rounded-lg overflow-hidden flex items-start justify-center group  '>
-                          <div className='flex items-center  justify-center relative  group' >
+                        <div key={i.toString()} className='  m-4 relative rounded-lg overflow-hidden flex items-start justify-center group  '>
+                          <div className='flex items-center justify-center relative  group' >
                             <Image
                               src={image.path}
-                              width={'300'}
-                              height={'200'}
+                              width={'2500'}
+                              height={'1050'}
                               alt={'IMAGE'}
-                              className=' m-1 rounded-lg  '
                             />
-                            <div className='absolute inset-0 bg-gradient-to-l from-transparent via-[#e838cc] to-[#4a22bd] opacity-0
-                            group-hover:opacity-80 transition-all duration-700 ' > </div>
+                            {/* <div className='absolute inset-0 bg-gradient-to-l from-transparent via-[#e838cc] to-[#4a22bd] opacity-0
+                            group-hover:opacity-80 transition-all duration-700 ' > </div> */}
                             {/* title */}
 
-                            <div className='absolute bottom-0 translate-y-full 
+                            <div className='absolute bottom-0 translate-y-full
                             grouo-hover:-translate-y-10 group-hover:xl:-translate-y-20 translate-all duration-300'>
                               <div className='flex items-center gap-x-2 text-[13px] tracking-[0.2em]  '>
                                 {/* title part 1 */}
-                                <div className='delay-100 '>{image.title}</div>
+                                <div className='delay-100 m-1'>{image.title}</div>
 
                                 {/* icon */}
                                 <div className='text-xl translate-y-[500%] group-hover:translate-y-0 translate-all duration-300 deplay-200' ><BsArrowRight /></div>

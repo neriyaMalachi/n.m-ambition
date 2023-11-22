@@ -55,18 +55,16 @@ const handler = async (req, res) => {
     const data = req.body;
 
     if (!data.name || !data.email || !data.message) {
-      return res.status(400).json({ message: " error" })
+      return res.status(400).json({ message: "חובה למלא את כל השדות !" })
+          // throw new Error("חובה למלא את כל השדות !");
+
     }
 
     try {
-      console.log(data.subject);
-
-
       await transporter.sendMail({
         ...mailOptions,
         ...generateEmailContent(data),
         subject: data.name,
-
       })
 
       return res.status(200).json({ success: true })

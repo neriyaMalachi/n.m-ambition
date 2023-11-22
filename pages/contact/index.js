@@ -4,9 +4,13 @@ import { motion } from 'framer-motion'
 import { fadeIn } from '../../variants'
 import { sendContactForm } from '../../lib/api'
 import { data } from 'autoprefixer'
+import React from "react";
+import { Alert } from "reactstrap";
+// import { ToastContainer, toast } from 'react-toastify'
+import { Toaster, toast } from 'react-hot-toast'
+
 
 const Contact = () => {
-
   const handleSubmit = async (e) => {
     e.preventDefault()
 
@@ -16,9 +20,26 @@ const Contact = () => {
 
     try {
       await sendContactForm(data)
-
+      toast.success(' ההודעה נשלחה בהצלחה',
+        {
+          style: {
+            borderRadius: '10px',
+            background: '#333',
+            color: '#fff',
+          },
+        }
+      );
     } catch (error) {
-      console.log(error.message);
+      console.log(error);
+      toast.error(error.response.data.message,
+        {
+          style: {
+            borderRadius: '10px',
+            background: '#333',
+            color: '#fff',
+          },
+        }
+      );
     }
   }
 
@@ -59,6 +80,10 @@ const Contact = () => {
               ' />
             </button>
           </motion.form>
+          <Toaster
+            position="bottom-center"
+            reverseOrder={false}
+          />
         </div>
       </div>
 
