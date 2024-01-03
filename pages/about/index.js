@@ -114,15 +114,15 @@ const About = () => {
       <div className='container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6 overflow-x-auto '>
         {/* text */}
         <div className='flex-1 flex flex-col text-center'>
-          <motion.h2
+          {/* <motion.h2
             variants={fadeIn("right", 0.2)}
             initial='hidden'
             animate='show'
             exit='hidden'
             className='h2  xl:text-right text-center'
           >
-           fffff המקום שבו<span className='text-accent'> רעיונות</span> נפגשים עם מעשה
-          </motion.h2>
+           המקום שבו<span className='text-accent'> רעיונות</span> נפגשים עם מעשה
+          </motion.h2> */}
           <motion.p
             variants={fadeIn("right", 0.4)}
             initial='hidden'
