@@ -16,7 +16,7 @@ const generateEmailContent = (data) => {
     str += `${CONYACT_MESSAGE_FIELDS[key]}: \n ${val}}\n \n `
     , "")
 
-
+console.log(val);
 
   const htmlData = Object.entries(data).reduce(
     (str, [key, val]) =>
