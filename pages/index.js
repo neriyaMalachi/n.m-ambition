@@ -4,6 +4,7 @@ import Avatar from '../components/Avatar'
 import ProjectsBtn from "../components/ProjectsBtn";
 import ParticlesContainer from "../components/ParticlesContainer";
 import Head from 'next/head';
+import Script from "next/script";
 
 const Home = () => {
   return (
@@ -16,6 +17,9 @@ const Home = () => {
           key="desc"
         />
       </Head>
+      <body>
+      <Script src="https://cdn.enable.co.il/licenses/enable-L17888rpjyz85bw0-0223-53914/init.js"></Script>
+      </body>
       <div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10 ">
         <div 
         className=" text-center flex flex-col justify-center xl:items-end xl:pt-40 xl:text-left h-full container mx-auto "
