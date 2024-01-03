@@ -3,10 +3,19 @@ import { fadeIn } from '../variants'
 import Avatar from '../components/Avatar'
 import ProjectsBtn from "../components/ProjectsBtn";
 import ParticlesContainer from "../components/ParticlesContainer";
+import Head from 'next/head';
 
 const Home = () => {
   return (
     <div className="bg-primary/60 h-full">
+      <Head>
+        <title>N.N Ambition</title>
+        <meta
+          name="description"
+          content="EVERYONE AND THEIR AMBITION."
+          key="desc"
+        />
+      </Head>
       <div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10 ">
         <div 
         className=" text-center flex flex-col justify-center xl:items-end xl:pt-40 xl:text-left h-full container mx-auto "
