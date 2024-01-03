@@ -121,7 +121,7 @@ const About = () => {
             exit='hidden'
             className='h2  xl:text-right text-center'
           >
-            המקום שבו<span className='text-accent'> רעיונות</span> נפגשים עם מעשה
+           fffff המקום שבו<span className='text-accent'> רעיונות</span> נפגשים עם מעשה
           </motion.h2>
           <motion.p
             variants={fadeIn("right", 0.4)}
