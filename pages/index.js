@@ -4,21 +4,18 @@ import Avatar from '../components/Avatar'
 import ProjectsBtn from "../components/ProjectsBtn";
 import ParticlesContainer from "../components/ParticlesContainer";
 import Head from 'next/head';
-import Image from "next/image";
-import logo from '../public/logo.png'
+
 const Home = () => {
   return (
     <div className="bg-primary/60 h-full">
       <Head>
+        <link rel="icon"  href="/favicon.ico" sizes="180x180" />
         <title>N.N Ambition</title>
-        
         <meta
           name="description"
           content="EVERYONE AND THEIR AMBITION."
           key="desc"
-          
         />
-        {/* <Image src={logo} alt="logoImage"/> */}
 
       </Head>
 
