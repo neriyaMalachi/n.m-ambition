@@ -22,6 +22,7 @@ const Contact = () => {
     const data = Object.fromEntries(formData.entries())
 
     try {
+      
       await sendContactForm(data)
       toast.success(' ההודעה נשלחה בהצלחה',
         {
@@ -31,16 +32,12 @@ const Contact = () => {
             color: '#fff',
           },
         },
-        // router.reload()
-        // data.name = "",
-        // data.message = "",
-        // data.email = "",
-        // console.log(data),
         setFormData({
           name: '',
           email: '',
           message: '',
         })
+       
       );
     } catch (error) {
       toast.error(error.response.data.message,

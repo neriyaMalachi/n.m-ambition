@@ -2,21 +2,16 @@
 
 import { mailOptions, transporter } from "./config/nodemailer";
 
-
-
 const CONYACT_MESSAGE_FIELDS = {
-  name: "שם",
-  email: "אימייל",
-  // subject:"Subject",
-  message: "הודעה",
-};
+  name: ":שם",
+  email: ":אימייל",
+  message: ":הודעה",
+}
 
 const generateEmailContent = (data) => {
   const stringData = Object.entries(data).reduce((str, [key, val]) =>
-    str += `${CONYACT_MESSAGE_FIELDS[key]}: \n ${val}}\n \n `
-    , "")
+    str += `${CONYACT_MESSAGE_FIELDS[key]}: \n ${val}}\n \n `, "")
 
-console.log(val);
 
   const htmlData = Object.entries(data).reduce(
     (str, [key, val]) =>
@@ -29,13 +24,12 @@ console.log(val);
         <head>
           <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-              <title>Email Template</title>
+              <title>N.M Ambition</title>
             </head>
             <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f4f4f4; padding: 20px;">
   
               <div style="max-width: 600px; margin: 0 auto; background-color: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
                 <h1 style="color: #333; text-align: center;">N.M AMBITION</h1>
-                <p>שלום,</p>
                
                 <div>${htmlData}</div>
               </div>
@@ -45,10 +39,6 @@ console.log(val);
   }
 }
 
-
-
-
-// export default function POST(req, res) {
 const handler = async (req, res) => {
   if (req.method === "POST") {
 
@@ -56,8 +46,6 @@ const handler = async (req, res) => {
 
     if (!data.name || !data.email || !data.message) {
       return res.status(400).json({ message: "חובה למלא את כל השדות !" })
-          // throw new Error("חובה למלא את כל השדות !");
-
     }
 
     try {
@@ -81,4 +69,3 @@ const handler = async (req, res) => {
 
 }
 export default handler
-// }

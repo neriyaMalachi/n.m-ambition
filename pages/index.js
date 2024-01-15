@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <div className="bg-primary/60 h-full">
       <Head>
-        {/* <link rel="icon"  href="/favicon.jpg"  sizes="280x280" /> */}
+        <link rel="icon"  href="/favicon.jpg"  sizes="280x280" />
         <title>N.M Ambition</title>
         <meta
           name="description"
