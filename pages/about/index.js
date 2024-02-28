@@ -10,13 +10,9 @@ import {
 
 import {
   SiNextdotjs,
-  SiFramer,
-  SiAdobexd,
-  SiAdobephotoshop,
   SiTailwindcss,
 } from "react-icons/si";
 
-import Avatar from '../../components/Avatar'
 import Circles from '../../components/Circles'
 
 import { motion } from 'framer-motion'
@@ -73,20 +69,20 @@ const aboutData = [
     info: [
       {
         title: ' עבודה עם מערכות מורכבות במקומות בטחוניות -',
-        stage: '2019 - 2023',
+        stage: '2019 - 2024',
       },
       {
         title: 'התחלת עבודה עם בעלי עסקים ומפתחים מבחוץ -',
-        stage: '2020 - 2023',
+        stage: '2020 - 2024',
       },
       {
         title: 'תמיכת לקוחות תכנית -',
-        stage: '2020 - 2023',
+        stage: '2020 - 2024',
 
       },
       {
         title: 'תפקידי ניהול פרויקטים -',
-        stage: '2020 - 2023',
+        stage: '2020 - 2024',
 
       },
     ],
@@ -123,19 +119,7 @@ const About = () => {
           >
            המקום שבו<span className='text-accent'> רעיונות</span> נפגשים עם מעשה
           </motion.h2>
-          <motion.p
-            variants={fadeIn("right", 0.4)}
-            initial='hidden'
-            animate='show'
-            exit='hidden'
-
-            className='max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0   '
-          >
-            {/* הכל התחיל שסיימתי לימודים של אנדסאי ונכנסתי למקום טכנולוגי בשירותי בצה"ל הכרתי שם אנשים מקצועים בכל התחומים  בכדי להקים חברה מצליחה ומשגשגת. */}
-            {/* התחלנו בפרוייקטים קטנים ומהר מאוד אנשים הגיעו מפה לאוזן, */}
-            {/* והחברה הגיע למה שהיא היום. כל העובדים נותנים את כל הידע הרחב שלהם והאהבה שלהם לתחום ולכן <span className='text-accent text-[20px] m-1  '>AMBITION </span>   הוא השם שמתווה את כלל העובדים ותמיד מזכיר לכולם להמשיך לתת את הכל. */}
-
-          </motion.p>
+          
           {/* counters */}
           <motion.div
             variants={fadeIn("right", 0.6)}
@@ -146,23 +130,23 @@ const About = () => {
             <div className='flex flex-1 xl:gap-x-6' >
               {/* experience */}
               <div className='relative flex-1  after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0 ' >
-                <div className=' text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px] ' >שנים של ניסיון</div>
+                <div className=' text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px] ' >  שנות ניסיון מעל </div>
                 <div className=' text-2xl xl:text-4xl font-extrabold text-accent mb-2 '>
-                  <CountUp start={0} end={4} duration={10} /> +
+                  <CountUp start={0} end={3} duration={10} /> +
                 </div>
               </div>
               {/* clients */}
               <div className='relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0 ' >
-                <div className=' text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px] ' >לקוחות מרוצים</div>
+                <div className=' text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px] ' >לקוחות </div>
                 <div className=' text-2xl xl:text-4xl font-extrabold text-accent mb-2 '>
-                  <CountUp start={0} end={13} duration={5} /> +
+                  <CountUp start={0} end={4} duration={5} /> +
                 </div>
               </div>
               {/* projects */}
               <div className='relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0 ' >
                 <div className=' text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px] ' >סיום פרויקטים</div>
                 <div className=' text-2xl xl:text-4xl font-extrabold text-accent mb-2 '>
-                  <CountUp start={0} end={15} duration={5} /> +
+                  <CountUp start={0} end={10} duration={5} /> +
                 </div>
               </div>
             </div>
