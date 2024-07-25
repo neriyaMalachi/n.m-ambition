@@ -63,6 +63,27 @@ const workSlides = {
 
       ],
     },
+    {
+      images: [
+        {
+          title: 'צור קשר',
+          path: '/mabuza1.png',
+        },
+        {
+          title: 'דף בית',
+          path: '/mabuza2.png',
+        },
+        {
+          title: 'מחירון',
+          path: '/mabuza3.png',
+        },
+        {
+          title: 'N.M AMBITION',
+          path: '/mabuza4.png',
+        },
+
+      ],
+    },
   ],
 };
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -72,6 +93,7 @@ import 'swiper/css/pagination'
 import { Pagination } from "swiper";
 import { BsArrowRight } from 'react-icons/bs'
 import Image from 'next/image';
+import logoNM_AMBITION from '../public/logo.png'
 
 const WorkSlider = () => {
   return (
@@ -90,13 +112,15 @@ const WorkSlider = () => {
                   <div className=' grid grid-cols-2 grid-rows-2 cursor-pointer '>
                     {slide.images.map((image, i) => {
                       return (
-                        <div key={i.toString()} className='  m-4 relative rounded-lg overflow-hidden flex items-start justify-center group  '>
-                          <div className='flex items-center justify-center relative  group' >
+                        <div key={i.toString()} className=' w-80 h-56 m-4 relative rounded-lg overflow-hidden flex items-start justify-center group  '>
+                          <div className='flex items-center justify-center relative  group ' >
                             <Image
+                            onLoadingComplete={()=>logoNM_AMBITION}
                               src={image.path}
-                              width={'2500'}
-                              height={'1050'}
+                              width={500}
+                              height={500}
                               alt={'IMAGE'}
+                              className='rounded-md'
                             />
                             {/* <div className='absolute inset-0 bg-gradient-to-l from-transparent via-[#e838cc] to-[#4a22bd] opacity-0
                             group-hover:opacity-80 transition-all duration-700 ' > </div> */}
