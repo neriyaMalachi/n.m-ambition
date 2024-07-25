@@ -2,7 +2,11 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  fs: 'empty'
-}
+  fs: "empty",
+  env: {
+    EMAIL: "nmambition2022@gmail.com",
+    EMAIL_PASS: "qtelddiimbxipifg",
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
