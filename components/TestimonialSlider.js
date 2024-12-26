@@ -1,7 +1,7 @@
 // testimonial data
 const testimonialData = [
   {
-    image: '/mancal2.png',
+    image: '/mancal.png',
     name: 'נריה מלחי',
     position: 'מנכ"ל החברה',
     message:
@@ -61,8 +61,8 @@ const TestimonialSlider = () => {
                     <Image
                       src={person.image}
                       width={150}
-                      height={100}
-                      className='rounded-full aspect-square '
+                      height={150}
+                      className='rounded-full object-cover object-center w-40 h-40'
                       alt='AVATAR IMAGE'
                     />
                   </div>

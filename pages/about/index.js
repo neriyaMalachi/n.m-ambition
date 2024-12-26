@@ -68,21 +68,17 @@ const aboutData = [
     title: 'ניסיון',
     info: [
       {
-        title: ' עבודה עם מערכות מורכבות במקומות בטחוניות -',
-        stage: '2019 - 2024',
+        title: ' עבודה עם מערכות מורכבות במקומות בטחוניות :',
       },
       {
-        title: 'התחלת עבודה עם בעלי עסקים ומפתחים מבחוץ -',
-        stage: '2020 - 2024',
+        title: 'התחלת עבודה עם בעלי עסקים ומפתחים מבחוץ :',
       },
       {
-        title: 'תמיכת לקוחות תכנית -',
-        stage: '2020 - 2024',
+        title: 'תמיכת לקוחות תכנית :',
 
       },
       {
-        title: 'תפקידי ניהול פרויקטים -',
-        stage: '2020 - 2024',
+        title: 'תפקידי ניהול פרויקטים :',
 
       },
     ],
@@ -104,7 +100,7 @@ const aboutData = [
 const About = () => {
   const [index, setIndex] = useState(0)
   return (
-    <div className='overflow-x-auto flex h-full bg-primary/30 py-32 text-center xl:text-left ' >
+    <div className='overflow-x-auto flex h-full bg-primary/30 py-32 text-center xl:text-left mt-5 ' >
       <Circles />
 
       <div className='container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6 overflow-x-auto '>
@@ -132,14 +128,14 @@ const About = () => {
               <div className='relative flex-1  after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0 ' >
                 <div className=' text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px] ' >  שנות ניסיון מעל </div>
                 <div className=' text-2xl xl:text-4xl font-extrabold text-accent mb-2 '>
-                  <CountUp start={0} end={3} duration={10} /> +
+                  <CountUp start={0} end={5} duration={10} /> +
                 </div>
               </div>
               {/* clients */}
               <div className='relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0 ' >
                 <div className=' text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px] ' >לקוחות </div>
                 <div className=' text-2xl xl:text-4xl font-extrabold text-accent mb-2 '>
-                  <CountUp start={0} end={4} duration={5} /> +
+                  <CountUp start={0} end={6} duration={5} /> +
                 </div>
               </div>
               {/* projects */}
@@ -182,7 +178,6 @@ const About = () => {
                   className='flex-1 flex flex-col md:flex-row max-w-max gap-x2 text-right items-center text-white/60 '
                 >
                   <div className='font-light mb-2 md:mb-0 '> {item.title}</div>
-                  <div>{item.stage}</div>
                   <div className='flex gap-x-4'>
                     {item.icons?.map((icon, itemIndex) => {
                       return <div key={itemIndex} className='text-2xl text-white' >{icon.icon}</div>
