@@ -16,6 +16,12 @@ const Home = () => {
           content="EVERYONE AND THEIR AMBITION."
           key="desc"
         />
+        <meta property="og:N.M Ambition" content="EVERYONE AND THEIR AMBITION." />
+        <meta
+          property="og:N.M Ambition"
+          content="EVERYONE AND THEIR AMBITION."
+        />
+        <meta property="og:N.M Ambition" content="./logo.png" />
       </Head>
 
       <div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10 ">
@@ -41,9 +47,8 @@ const Home = () => {
           >
             יש לכם עסק אבל אין לכם אתר ? <br />
             יש לכם רעיון לתוכנה ולא יודעים מאיפה להתחיל ?<br />
-            <strong className="text-white text-xl"> 
-
-            אז הגעתם למקום הנכון !
+            <strong className="text-white text-xl">
+              אז הגעתם למקום הנכון !
             </strong>
             <br />
             צרו איתנו קשר הסבר ראשוני ויעוץ חינם ללא התחיבות

@@ -63,12 +63,11 @@ const WorkSlider = () => {
         <SwiperSlide key={unique.toString()}>
           <div className="grid grid-cols-2 grid-rows-2 cursor-pointer gap-4">
             {slide.images.map((image, i) => (
-              <Link href={"#"} key={i.toString()} passHref>
+              <Link rel="canonical"  href={"#"} key={i.toString()} passHref>
                 <div className="w-full h-full relative rounded-lg overflow-hidden flex items-center justify-center group">
                   <div className="w-full h-full aspect-w-16 aspect-h-9 relative">
                     <Image
                       src={image.path}
-                      layout="responcisve"
                       alt={image.title}
                       className="object-cover w-full h-full rounded-md"
                       width={500}
