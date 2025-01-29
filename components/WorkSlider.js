@@ -11,10 +11,10 @@ const WorkSlider = () => {
     slides: [
       {
         images: [
-          { title: "התחברות", path: "/avia1.png", link: "/login" },
-          { title: "דף הבית", path: "/avia2.png", link: "/home" },
-          { title: "דף אדמין", path: "/avia3.png", link: "/admin" },
-          { title: "איפס סיסמה", path: "/avia4.png", link: "/reset-password" },
+          { title: "התחברות", path: "/avia1.png", link: "https://bakery-avia.com/" },
+          { title: "דף הבית", path: "/avia2.png", link: "https://bakery-avia.com/" },
+          { title: "דף אדמין", path: "/avia3.png", link: "https://bakery-avia.com/" },
+          { title: "איפס סיסמה", path: "/avia4.png", link: "https://bakery-avia.com/" },
         ],
       },
       {
@@ -35,16 +35,16 @@ const WorkSlider = () => {
       },
       {
         images: [
-          { title: "צור קשר", path: "/mabuza1.png", link: "/contact" },
-          { title: "דף בית", path: "/mabuza2.png", link: "/home" },
-          { title: "מחירון", path: "/mabuza3.png", link: "/pricing" },
-          { title: "N.M AMBITION", path: "/mabuza4.png", link: "/about" },
+          { title: "צור קשר", path: "/mabuza1.png", link: "https://landing-page-mabuza.vercel.app/" },
+          { title: "דף בית", path: "/mabuza2.png", link: "https://landing-page-mabuza.vercel.app/" },
+          { title: "מחירון", path: "/mabuza3.png", link: "https://landing-page-mabuza.vercel.app/" },
+          { title: "שאלות", path: "/mabuza4.png", link: "https://landing-page-mabuza.vercel.app/" },
         ],
       },
       {
         images: [
           { title: "ניהול מערכת", path: "/rsvps1.png", link: "/#" },
-          { title: "ניהול משתמשים", path: "/rsvps2.png", link: "/#" },
+          { title: "דף ראשי", path: "/rsvps2.png", link: "/#" },
           { title: "תוכן", path: "/rsvps3.png", link: "/#" },
           { title: "תוכן", path: "/rsvps4.png", link: "/#" },
         ],

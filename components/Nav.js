@@ -1,4 +1,3 @@
-// icons
 import Link from "next/link";
 import { useRouter } from "next/router";
 import {
@@ -6,7 +5,6 @@ import {
   HiUser,
   HiViewColumns,
   HiRectangleGroup,
-  HiChatBubbleBottomCenterText,
   HiEnvelope,
 } from "react-icons/hi2";
 import { IoBriefcase } from "react-icons/io5";
@@ -18,7 +16,7 @@ export const navData = [
   { name: "שירותים", path: "/services", icon: <HiRectangleGroup /> },
   { name: "עבודות", path: "/work", icon: <HiViewColumns /> },
   {
-    name: "עובדים",
+    name: "הצוות ",
     path: "/testimonials",
     icon: <IoBriefcase />,
   },

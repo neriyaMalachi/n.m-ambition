@@ -1,4 +1,3 @@
-import  { Metadata } from "next";
 import { useRouter } from 'next/router';
 import Layout from '../components/Layout';
 import '../styles/globals.css';
@@ -25,7 +24,8 @@ function MyApp({ Component, pageProps }) {
     </motion.div>
    
     </AnimatePresence>
-  </Layout>)
+  </Layout>
+  )
 }
 
 export default MyApp;
