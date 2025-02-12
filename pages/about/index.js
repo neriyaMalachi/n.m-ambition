@@ -6,7 +6,7 @@ import { fadeIn } from "../../variants";
 
 const About = () => {
   return (
-    <div className="overflow-auto bg-primary/30 py-36 px-6 text-center   h-screen">
+    <div className="overflow-auto thin-scrollbar bg-primary/30 py-36 px-6 text-center h-screen">
       {/* Header Section */}
       <motion.h1
         variants={fadeIn("down", 0.2)}
