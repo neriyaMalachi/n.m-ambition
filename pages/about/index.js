@@ -123,7 +123,7 @@ const About = () => {
             </div>
           </Link>
           <Link
-            href="https://www.stealthcode.co.il/"
+            href="https://www.stealthcode.co/"
             target="_blank"
             rel="noopener noreferrer"
           >
