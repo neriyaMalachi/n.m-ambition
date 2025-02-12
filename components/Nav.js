@@ -13,15 +13,11 @@ import { IoBriefcase } from "react-icons/io5";
 export const navData = [
   { name: "בית", path: "/", icon: <HiHome /> },
   { name: "עלינו", path: "/about", icon: <HiUser /> },
-  { name: "שירותים", path: "/services", icon: <HiRectangleGroup /> },
+  { name: "מסלולים", path: "/services", icon: <HiRectangleGroup /> },
   { name: "עבודות", path: "/work", icon: <HiViewColumns /> },
+
   {
-    name: "הצוות ",
-    path: "/testimonials",
-    icon: <IoBriefcase />,
-  },
-  {
-    name: "אימייל",
+    name: "התחבר",
     path: "/contact",
     icon: <HiEnvelope />,
   },

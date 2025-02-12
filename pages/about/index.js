@@ -1,192 +1,160 @@
-import React, { useState } from 'react'
-// icons
-import {
-  FaHtml5,
-  FaCss3,
-  FaJs,
-  FaReact,
-  FaFigma,
-} from "react-icons/fa";
-
-import {
-  SiNextdotjs,
-  SiTailwindcss,
-} from "react-icons/si";
-
-import Circles from '../../components/Circles'
-
-import { motion } from 'framer-motion'
-import { fadeIn } from '../../variants'
-
-import CountUp from 'react-countup';
-
-//  data
-const aboutData = [
-  {
-    title: 'כישורים',
-    info: [
-      {
-        title: 'מפתחים בשפות שונות -',
-        icons: [
-          {
-            id: 1,
-            icon: <FaHtml5 />
-          },
-          {
-            id: 2,
-            icon: <FaCss3 />,
-          }, {
-            id: 3,
-            icon: <FaJs />,
-          }, {
-            id: 4,
-            icon: <FaReact />,
-          }, {
-            id: 5,
-            icon: <SiNextdotjs />,
-          }, {
-            id: 6,
-            icon: <SiTailwindcss />,
-          },
-
-
-        ],
-      },
-      {
-        title: 'מעצבי UI/UX -',
-        icons: [
-          {
-            id: 1,
-            icon: <FaFigma />,
-          },
-
-
-        ],
-      },
-    ],
-  }, {
-    title: 'ניסיון',
-    info: [
-      {
-        title: ' עבודה עם מערכות מורכבות במקומות בטחוניות :',
-      },
-      {
-        title: 'התחלת עבודה עם בעלי עסקים ומפתחים מבחוץ :',
-      },
-      {
-        title: 'תמיכת לקוחות תכנית :',
-
-      },
-      {
-        title: 'תפקידי ניהול פרויקטים :',
-
-      },
-    ],
-  },
-  {
-    title: 'תמיכה ושירותים ',
-    info: [
-      {
-        title: `החברה נותנת תמיכה ושרותים של העלאת הפרוייקט גם אחרי סיום העבודה בדיקות התוכנה אחריות על deploy תקין ועבודה טובה ומהירה של התוכנה זמינה לפניות של הלקוחות בכל שעות היום .`,
-
-      },
-      {
-        title: " השירות נעשה עם עובדים בעלת  סבלנות רבה ואפשריות להנגיש ללקוחות שלא מבינים בכלל בתוכנה את העבודה ועל מה הם משלמים ולחוות את הבניה איתנו יחד ולתת את הדגשים שהלקוח יותר חשוב לו."
-      },
-    ],
-  },
-];
+import React, { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { fadeIn } from "../../variants";
 
 const About = () => {
-  const [index, setIndex] = useState(0)
   return (
-    <div className='overflow-x-auto flex h-full bg-primary/30 py-32 text-center xl:text-left mt-5 ' >
-      <Circles />
+    <div className="overflow-auto bg-primary/30 py-36 px-6 text-center   h-screen">
+      {/* Header Section */}
+      <motion.h1
+        variants={fadeIn("down", 0.2)}
+        initial="hidden"
+        animate="show"
+        className="text-xl font-bold mb-4 text-blue-600/60 md:text-center md:text-3xl "
+      >
+        אנחנו בית תוכנה שמתמחה בפיתוח אתרים ומערכות בהתאמה אישית לעסקים קטנים
+        ויזמים.
+      </motion.h1>
 
-      <div className='container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6 overflow-x-auto '>
-        {/* text */}
-        <div className='flex-1 flex flex-col text-center'>
-          <motion.h2
-            variants={fadeIn("right", 0.2)}
-            initial='hidden'
-            animate='show'
-            exit='hidden'
-            className='h2  xl:text-right text-center'
-          >
-           המקום שבו<span className='text-accent'> רעיונות</span> נפגשים עם מעשה
-          </motion.h2>
-          
-          {/* counters */}
-          <motion.div
-            variants={fadeIn("right", 0.6)}
-            initial='hidden'
-            animate='show'
-            exit='hidden'
-            className='hidden md:flex md:max-w-xl xl:max-w-none mx-auto xl:mx-0 mb-8 ' >
-            <div className='flex flex-1 xl:gap-x-6' >
-              {/* experience */}
-              <div className='relative flex-1  after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0 ' >
-                <div className=' text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px] ' >  שנות ניסיון מעל </div>
-                <div className=' text-2xl xl:text-4xl font-extrabold text-accent mb-2 '>
-                  <CountUp start={0} end={5} duration={10} /> +
-                </div>
-              </div>
-              {/* clients */}
-              <div className='relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0 ' >
-                <div className=' text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px] ' >לקוחות </div>
-                <div className=' text-2xl xl:text-4xl font-extrabold text-accent mb-2 '>
-                  <CountUp start={0} end={6} duration={5} /> +
-                </div>
-              </div>
-              {/* projects */}
-              <div className='relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0 ' >
-                <div className=' text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px] ' >סיום פרויקטים</div>
-                <div className=' text-2xl xl:text-4xl font-extrabold text-accent mb-2 '>
-                  <CountUp start={0} end={10} duration={5} /> +
-                </div>
-              </div>
-            </div>
-          </motion.div>
+      {/* Main Content: About and Skills */}
+      <div className="grid  gap-12 items-center justify-center">
+        <div className="text-center md:text-center">
+          <h2 className="text-2xl font-semibold mb-4">מי אנחנו?</h2>
+          <p className="leading-relaxed mb-4">
+            אנחנו צוות של מפתחים מנוסים, המתמחה בפיתוח אתרים, מערכות ניהול
+            ואפליקציות, ומספקים פתרונות דיגיטליים חדשניים המותאמים בדיוק לצרכים
+            של כל לקוח.
+          </p>
+
+          <h2 className="text-2xl font-semibold mb-4">מה אנחנו עושים?</h2>
+          <ul className="list-disc list-inside mt-4 text-lg mx-auto max-w-2xl">
+            <li>
+              <span className="font-semibold">פיתוח אתרים בהתאמה אישית</span> -
+              אתרי תדמית, חנויות אונליין ועוד.
+            </li>
+            <li>
+              <span className="font-semibold">בניית מערכות ניהול (CRM)</span> -
+              לניהול לקוחות, מלאי ועובדים.
+            </li>
+            <li>
+              <span className="font-semibold">אוטומציה לעסקים</span> - חיבור
+              מערכות ושיפור תהליכים.
+            </li>
+            <li>
+              <span className="font-semibold">פיתוח אפליקציות ווב</span> -
+              מערכות פנימיות ופאנלים לניהול.
+            </li>
+            <li>
+              <span className="font-semibold">שירותי תחזוקה ותמיכה</span> -
+              עדכוני אבטחה ושיפורי ביצועים.
+            </li>
+          </ul>
         </div>
-        {/* info */}
-        <motion.div
-          variants={fadeIn("left", 0.4)}
-          initial='hidden'
-          animate='show'
-          exit='hidden'
-          className='flex flex-col w-full xl:max-w-[48%] h-[480px]  '>
-          <div className='flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4'>
-            {aboutData.map((item, itemIndex) => {
-              return (
-                <div
-                  key={itemIndex}
-                  className={`${index === itemIndex &&
-                    'text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300 '
-                    } cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0 `}
-                  onClick={() => setIndex(itemIndex)}
-                >
-                  {item.title}
-                </div>
-              )
-            })}
+
+        <div className="flex justify-center mt-6 md:mt-0 md:hidden">
+          <Image
+            src="/logo.png"
+            width={400}
+            height={300}
+            alt="Developer Image"
+            className="rounded-lg shadow-lg"
+          />
+        </div>
+      </div>
+
+      {/* Skills, Experience, and Services */}
+      <div className="mt-12 md:flex md:flex-col md:items-center md:justify-center">
+        <h2 className="text-2xl font-semibold mb-4">למה לבחור בנו?</h2>
+        <div className="grid md:grid-cols-2 gap-6 ">
+          <div className="p-4 md:w-96 border rounded-lg shadow-md">
+            <h3 className="text-lg font-bold text-blue-500">
+              פתרונות בהתאמה אישית
+            </h3>
+            <p>אנחנו מתאימים את הפיתוח לצרכים המדויקים של הלקוחות שלנו.</p>
           </div>
-          <div className='  py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start '>
-            {aboutData[index].info.map((item, itemIndex) => {
-              return (
-                <div
-                  key={itemIndex}
-                  className='flex-1 flex flex-col md:flex-row max-w-max gap-x2 text-right items-center text-white/60 '
-                >
-                  <div className='font-light mb-2 md:mb-0 '> {item.title}</div>
-                  <div className='flex gap-x-4'>
-                    {item.icons?.map((icon, itemIndex) => {
-                      return <div key={itemIndex} className='text-2xl text-white' >{icon.icon}</div>
-                    })}
-                  </div>
-                </div>)
-            })}
+          <div className="p-4 md:w-96 border rounded-lg shadow-md item">
+            <h3 className="text-lg font-bold text-blue-500">
+              טכנולוגיות מתקדמות
+            </h3>
+            <p>
+              אנחנו עובדים עם הכלים והשפות החדשות ביותר לפיתוח פתרונות איכותיים.
+            </p>
           </div>
-        </motion.div>
+          <div className="p-4 md:w-96 border rounded-lg shadow-md">
+            <h3 className="text-lg font-bold text-blue-500">
+              ליווי מקצועי ואישי
+            </h3>
+            <p>אנו מעניקים תמיכה מלאה לאורך כל התהליך, בכל שלב.</p>
+          </div>
+          <div className="p-4 md:w-96 border rounded-lg shadow-md">
+            <h3 className="text-lg font-bold text-blue-500">מיקוד בתוצאות</h3>
+            <p>
+              אנחנו מפתחים אתרים מהירים, מאובטחים ומותאמים ל-SEO, עם דגש על
+              תוצאות איכותיות.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Technical Skills Section */}
+      <div className="mt-12 flex flex-col items-center justify-center">
+        <h2 className="text-2xl font-semibold mb-4">בתי תוכנה משותפים</h2>
+        <div className="grid grid-cols-1  gap-8 md:grid-cols-2  md:max-w-full">
+          <div className="p-4 border rounded-lg shadow-md transition-all w-full max-w-xs mx-auto flex flex-col items-center">
+            <Image
+              src="/logo.png"
+              width={350}
+              height={300}
+              alt="בית תוכנה nm-ambition"
+              className="rounded-lg mb-4 "
+            />
+
+            <Link
+              href="#"
+              className="w-full text-center text-xl font-semibold py-2 mt-10 rounded-lg transition-colors"
+            >
+              בית תוכנה המתמחה בפיתוח אתרים מותאמים אישית ופתרונות דיגיטליים
+              מתקדמים.
+            </Link>
+          </div>
+          <div className="p-4 border rounded-lg shadow-md transition-all w-full max-w-xs mx-auto flex flex-col items-center">
+            <Image
+              src="/stealthCode_Logo.webp"
+              width={200}
+              height={150}
+              alt="בית תוכנה stealthCode"
+              className="rounded-lg mb-4"
+            />
+
+            <Link
+              href="#"
+              className="w-full text-center text-lg font-semibold py-2 mt-4 rounded-lg transition-colors"
+            >
+              stealthCode בית תוכנה המתמחה בעבודה עם סטארטאפים בשלבים מוקדמים.
+              שירותים: איפיון, ארכיטקטורה, עיצוב UI/UX, פיתוח fullstack, שירותי
+              ענן ו DevOp
+            </Link>
+          </div>
+          
+        </div>
+      </div>
+
+      {/* Contact Link */}
+      <div className="mt-12 text-center">
+        <h2 className="text-2xl font-semibold mb-4">
+          רוצים אתר או מערכת בהתאמה אישית?
+        </h2>
+        <p className="text-lg">
+          צרו קשר איתנו ונבנה פתרון דיגיטלי שיקדם את העסק שלכם!
+        </p>
+        <Link
+          href="/contact"
+          className="mt-6 inline-block bg-blue-600/60 text-white px-6 py-3 rounded-lg text-lg hover:bg-blue-700 transition"
+        >
+          צור קשר
+        </Link>
       </div>
     </div>
   );
