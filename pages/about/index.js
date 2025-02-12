@@ -102,42 +102,47 @@ const About = () => {
       <div className="mt-12 flex flex-col items-center justify-center">
         <h2 className="text-2xl font-semibold mb-4">בתי תוכנה משותפים</h2>
         <div className="grid grid-cols-1  gap-8 md:grid-cols-2  md:max-w-full">
-          <div className="p-4 border rounded-lg shadow-md transition-all w-full max-w-xs mx-auto flex flex-col items-center">
-            <Image
-              src="/logo.png"
-              width={350}
-              height={300}
-              alt="בית תוכנה nm-ambition"
-              className="rounded-lg mb-4 "
-            />
+          <Link
+            href="https://www.nm-ambition.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="p-4 border rounded-lg shadow-md transition-all w-full max-w-xs mx-auto flex flex-col items-center">
+              <Image
+                src="/logo.png"
+                width={350}
+                height={300}
+                alt="בית תוכנה nm-ambition"
+                className="rounded-lg mb-4 "
+              />
 
-            <Link
-              href="#"
-              className="w-full text-center text-xl font-semibold py-2 mt-10 rounded-lg transition-colors"
-            >
-              בית תוכנה המתמחה בפיתוח אתרים מותאמים אישית ופתרונות דיגיטליים
-              מתקדמים.
-            </Link>
-          </div>
-          <div className="p-4 border rounded-lg shadow-md transition-all w-full max-w-xs mx-auto flex flex-col items-center">
-            <Image
-              src="/stealthCode_Logo.webp"
-              width={200}
-              height={150}
-              alt="בית תוכנה stealthCode"
-              className="rounded-lg mb-4"
-            />
+              <div className="w-full text-center text-xl font-semibold py-2 mt-10 rounded-lg transition-colors">
+                בית תוכנה המתמחה בפיתוח אתרים מותאמים אישית ופתרונות דיגיטליים
+                מתקדמים.
+              </div>
+            </div>
+          </Link>
+          <Link
+            href="https://www.stealthcode.co.il/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="p-4 border rounded-lg shadow-md transition-all w-full max-w-xs mx-auto flex flex-col items-center">
+              <Image
+                src="/stealthCode_Logo.webp"
+                width={200}
+                height={150}
+                alt="בית תוכנה stealthCode"
+                className="rounded-lg mb-4"
+              />
 
-            <Link
-              href="#"
-              className="w-full text-center text-lg font-semibold py-2 mt-4 rounded-lg transition-colors"
-            >
-              stealthCode בית תוכנה המתמחה בעבודה עם סטארטאפים בשלבים מוקדמים.
-              שירותים: איפיון, ארכיטקטורה, עיצוב UI/UX, פיתוח fullstack, שירותי
-              ענן ו DevOp
-            </Link>
-          </div>
-          
+              <div className="w-full text-center text-lg font-semibold py-2 mt-4 rounded-lg transition-colors">
+                stealthCode בית תוכנה המתמחה בעבודה עם סטארטאפים בשלבים מוקדמים.
+                שירותים: איפיון, ארכיטקטורה, עיצוב UI/UX, פיתוח fullstack,
+                שירותי ענן ו DevOp
+              </div>
+            </div>
+          </Link>
         </div>
       </div>
 
